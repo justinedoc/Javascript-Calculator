@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+    <script src="calculator.js"></script>
+
+</head>
+
+<body>
+
+    <section class="container">
+        <div class="input-container">
+            <div class="output-area">
+                <input type="text" id="output" disabled>
+            </div>
+            <span id="currentCalculatorName">
+                <i class="calc-name">My Calculator</i>
+            </span>
+            <div class="input-area">
+                <input type="button" value="7" onclick="appendToOutput('7')">
+                <input type="button" value="8" onclick="appendToOutput('8')">
+                <input type="button" value="9" onclick="appendToOutput('9')">
+                <input type="button" value="*" onclick="appendToOutput('*')">
+                <br>
+
+                <input type="button" value="4" onclick="appendToOutput('4')">
+                <input type="button" value="5" onclick="appendToOutput('5')">
+                <input type="button" value="6" onclick="appendToOutput('6')">
+                <input type="button" value="-" onclick="appendToOutput('-')">
+                <br>
+
+                <input type="button" value="1" onclick="appendToOutput('1')">
+                <input type="button" value="2" onclick="appendToOutput('2')">
+                <input type="button" value="3" onclick="appendToOutput('3')">
+                <input type="button" value="+" onclick="appendToOutput('+')">
+                <br>
+
+                <input type="button" value="0" onclick="appendToOutput('0')">
+                <input type="button" value="." onclick="appendToOutput('.')">
+                <input type="button" value="/" onclick="appendToOutput('/')">
+                <input type="button" value="^" onclick="appendToOutput('**')">
+                <br>
+
+                <input type="button" value="()" onclick="appendToOutput('()')">
+                <input type="button" value="AC" onclick="clearOutput()" id="CurrentFirstLetterValue">
+                <input type="button" value="Del" onclick="deleteOneFromOutput()">
+                <input type="button" class="calculation-btn" value="=" onclick="calculation()">
+            </div>
+
+
+    </section>
+    <div class="change-name-form">
+        <div class="change-name-input">
+            <input type="text" id="newName" placeholder="Name here...">
+        </div>
+        <div class="change-name-submit">
+            <button type="button" onclick="changeName()">Change Name</button>
+        </div>
+    </div>
+</body>
+
+</html>

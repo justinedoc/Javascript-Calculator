@@ -1,0 +1,103 @@
+input[type="button"] {
+    font-size: 20px;
+    font-family: sans-serif;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.527);
+    margin-top: 2px;
+    margin-right: -1px;
+    background: #ffffff;
+
+
+}
+
+body {
+    background-color: wheat;
+    width: 100%;
+}
+
+section {
+    width: 250px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    margin-left: 470px;
+    margin-top: 40px;
+
+}
+
+.container .input-container {
+    padding: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.774);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    box-shadow: 6px 6px 30px rgba(0, 0, 0, 0.205);
+    background: rgba(253, 242, 220, 0.911);
+
+}
+
+#output {
+    width: 199px;
+    height: 80px;
+    border: 1px solid rgba(0, 0, 0, 0.923);
+    border-radius: 3px;
+    background: #7a7979bd;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.14);
+    color: black;
+    font-weight: 600;
+    padding: 0px 0px 0px 10px;
+}
+
+.change-name-form {
+    margin-left: 450px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    border: 2px solid rgba(255, 255, 255, 0);
+    width: 290px;
+    border-radius: 7px;
+    background: #ffffff;
+
+}
+
+.change-name-input input {
+    padding: 10px;
+    background: #ffffff;
+    border-radius: 5px;
+    margin-top: 2px;
+    border-color: #ffffff;
+    margin-left: 1px;
+    width: 162px;
+    border: none;
+    outline: none;
+    border-style: none;
+}
+
+.change-name-submit button {
+    padding: 6px;
+    height: 40px;
+    width: 104px;
+    margin-left: 5px;
+    border: 0px solid wheat;
+    border-radius: 5px;
+    background: rgba(253, 242, 220, 0.911);
+    cursor: pointer;
+    transition: 1s;
+}
+
+.change-name-submit button:hover {
+    margin-left: 3px;
+    border: 2px solid wheat;
+    background: wheat;
+
+
+}
