@@ -15,11 +15,17 @@
     <section class="container">
         <div class="input-container">
 
-            
+            <div class="head">
+                <h2>Justin</h2>
+                <div class="digital-time">
+                    <div class="hours">00:</div>
+                    <div class="minutes">00:</div>
+                    <div class="seconds">00</div>
+                </div>
+            </div>
+
             <input type="text" id="output" disabled>
-            <span id="currentCalculatorName">
-                <i class="calc-name">My Calculator</i>
-            </span>
+            <span id="currentCalculatorName">My Calculator</span>
             <div class="input-area">
                 <input type="button" value="7" onclick="appendToOutput('7')">
                 <input type="button" value="8" onclick="appendToOutput('8')">
@@ -45,7 +51,7 @@
                 <input type="button" value="^" onclick="appendToOutput('**')">
                 <br>
 
-                <input type="button" value="()" onclick="appendToOutput('()')">
+                <input type="button" value="00" onclick="appendToOutput('00')">
                 <input type="button" value="AC" onclick="clearOutput()" id="CurrentFirstLetterValue">
                 <input type="button" value="Del" onclick="deleteOneFromOutput()">
                 <input type="button" class="calculation-btn" value="=" onclick="calculation()">
