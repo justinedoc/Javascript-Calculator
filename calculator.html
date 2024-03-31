@@ -13,6 +13,7 @@
 <body>
 
     <section class="container">
+
         <div class="input-container">
 
             <div class="head">
@@ -24,48 +25,56 @@
                 </div>
             </div>
 
-            <input type="text" id="output" disabled>
+            <div class="output-container">
+                <input type="text" id="output" disabled>
+                <input type="number" id="calculated" disabled>
+            </div>
+
+
             <span id="currentCalculatorName">My Calculator</span>
             <div class="input-area">
                 <input type="button" value="7" onclick="appendToOutput('7')">
                 <input type="button" value="8" onclick="appendToOutput('8')">
                 <input type="button" value="9" onclick="appendToOutput('9')">
-                <input type="button" value="*" onclick="appendToOutput('*')">
+                <input type="button" value="*" onclick="appendToOutput('*')" class="sym">
                 <br>
 
                 <input type="button" value="4" onclick="appendToOutput('4')">
                 <input type="button" value="5" onclick="appendToOutput('5')">
                 <input type="button" value="6" onclick="appendToOutput('6')">
-                <input type="button" value="-" onclick="appendToOutput('-')">
+                <input type="button" value="-" onclick="appendToOutput('-')" class="sym">
                 <br>
 
                 <input type="button" value="1" onclick="appendToOutput('1')">
                 <input type="button" value="2" onclick="appendToOutput('2')">
                 <input type="button" value="3" onclick="appendToOutput('3')">
-                <input type="button" value="+" onclick="appendToOutput('+')">
+                <input type="button" value="+" onclick="appendToOutput('+')" class="sym">
                 <br>
 
                 <input type="button" value="0" onclick="appendToOutput('0')">
-                <input type="button" value="." onclick="appendToOutput('.')">
-                <input type="button" value="/" onclick="appendToOutput('/')">
-                <input type="button" value="^" onclick="appendToOutput('**')">
+                <input type="button" value="." onclick="appendToOutput('.')" class="sym">
+                <input type="button" value="/" onclick="appendToOutput('/')" class="sym">
+                <input type="button" value="^" onclick="appendToOutput('**')" class="sym">
                 <br>
 
                 <input type="button" value="00" onclick="appendToOutput('00')">
-                <input type="button" value="AC" onclick="clearOutput()" id="CurrentFirstLetterValue">
-                <input type="button" value="Del" onclick="deleteOneFromOutput()">
-                <input type="button" class="calculation-btn" value="=" onclick="calculation()">
+                <input type="button" value="AC" onclick="clearOutput()" id="CurrentFirstLetterValue" class="sym">
+                <input type="button" value="Del" onclick="deleteOneFromOutput()" class="sym">
+                <input type="button" class="calculation-btn sym" value="=" onclick="calculation()">
             </div>
 
 
     </section>
+
     <div class="change-name-form">
-
-        <input type="text" id="newName" placeholder="Name here...">
-
-        <button type="button" onclick="changeName()">Change Name</button>
-
+        <input type="text" id="newName" placeholder="Here...">
+        <button id="changeName" onclick="changeName()">Change Name</button>
     </div>
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

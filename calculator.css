@@ -15,6 +15,11 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative;
+}
+
+input[type="button"]:hover {
+    background: rgba(229, 168, 54, 0.548);
 }
 
 
@@ -24,11 +29,23 @@ input[type="button"] {
     width: 50px;
     height: 50px;
     margin-bottom: 1px;
-    border-radius: 5px;
-    border: 1px solid rgba(0, 0, 0, 0.527);
+    border-radius: 20%;
+    border: 1px inset rgba(0, 0, 0, 0.627);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.127);
     margin-top: 2px;
     margin-right: -1px;
-    background: #ffffff;
+    background: rgba(253, 242, 220, 0.911);
+    transition: .2s ease-in;
+}
+
+#currentCalculatorName {
+    font-size: 16px;
+    font-family: 'style script';
+    letter-spacing: 1px;
+}
+
+input.sym {
+    background: wheat;
 }
 
 .container {
@@ -53,17 +70,30 @@ input[type="button"] {
     align-items: center;
 }
 
-#output {
+.output-container {
     width: 100%;
     height: 75px;
     border: 1px solid rgba(0, 0, 0, 0.923);
     border-radius: 3px;
     background: #7a7979bd;
-    box-shadow: inset 1px 1px 20px rgba(0, 0, 0, 0.14);
+    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.74);
+    padding: 0 5px 0 5px;
+}
+
+.output-container input {
+    width: 100%;
+    height: calc(75px / 2);
+    background: transparent;
+    border: none;
     color: black;
-    font-weight: 600;
-    font-size: 20px;
-    padding: 2px;
+    font-weight: 500;
+    font-size: 27px;
+    font-family: 'digital-clock-font';
+    text-align: left;
+}
+
+.output-container input:nth-child(2) {
+    text-align: right;
 }
 
 .change-name-form {
@@ -87,17 +117,22 @@ input[type="button"] {
 }
 
 .change-name-form button {
-    width: 100px;
+    width: 160px;
     height: 100%;
     background: rgba(253, 242, 220, 0.911);
-    border: none;
-    border-radius: 0px 9px 9px 0;
-    margin-right: 5px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.045);
+    border: 1px solid transparent;
+    border-radius: 0 9px 9px 0;
     font-size: 12px;
     font-weight: 400;
     cursor: pointer;
-    transition: .3s ease-in;
+    transition: .3s ease-in-out;
     color: dimgrey;
+
+}
+
+.change-name-form button:hover {
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.01);
 }
 
 .change-name-form button:hover {
@@ -145,10 +180,4 @@ input[type="button"] {
     color: black;
     font-family: 'Style Script', sans-serif;
     margin-left: 3px;
-}
-
-#currentCalculatorName {
-    font-size: 16px;
-    font-family: 'style script';
-    letter-spacing: 1px;
 }

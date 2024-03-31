@@ -1,9 +1,11 @@
+
 function appendToOutput(value) {
     document.getElementById("output").value += value
 };
 
 function clearOutput() {
     document.getElementById("output").value = "";
+    document.getElementById("calculated").value = "";
 };
 
 function deleteOneFromOutput() {
@@ -16,7 +18,7 @@ function calculation() {
     try {
         const result = eval(document.getElementById("output").value);
 
-        document.getElementById("output").value = result;
+        document.getElementById("calculated").value = result;
     } catch (error) {
         document.getElementById("output").value = "Syntax Error";
     }
@@ -25,7 +27,9 @@ function calculation() {
 };
 
 
+
 function changeName() {
+
     const newNameInput = document.getElementById("newName");
     const oldName = document.getElementById("currentCalculatorName");
 
@@ -58,19 +62,20 @@ function digitalClock() {
     let clockSeconds = document.querySelector(".seconds")
 
 
-    if (clockHours.textContent < 9) {
+
+    if (hours <= 9) {
         clockHours.textContent = `0${hours}`;
     } else {
         clockHours.textContent = `${hours}:`
     }
 
-    if (clockMinutes.innerHTML < 9) {
-        clockMinutes.innerHTML = `0${minutes}`;
+    if (minutes <= 9) {
+        clockMinutes.innerHTML = `0${minutes}:`;
     } else {
         clockMinutes.innerHTML = `${minutes}:`
     }
 
-    if (clockSeconds.innerHTML < 9) {
+    if (seconds <= 9) {
         clockSeconds.innerHTML = `0${seconds}`
     } else {
         clockSeconds.innerHTML = `${seconds}`
@@ -78,3 +83,4 @@ function digitalClock() {
 }
 
 setInterval(digitalClock, 1000)
+
