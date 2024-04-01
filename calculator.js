@@ -22,8 +22,6 @@ function calculation() {
     } catch (error) {
         document.getElementById("output").value = "Syntax Error";
     }
-
-
 };
 
 
@@ -39,7 +37,7 @@ function changeName() {
         let display = confirm("Set new name to " + newNameInput.value + "?");
 
         if (display === true) {
-            oldName.innerHTML = `${newNameInput.value}'s Calculator`;
+            oldName.textContent = `${newNameInput.value}'s Calculator`;
         }
     }
     let CurrentFirstLetterValue = document.getElementById("CurrentFirstLetterValue");
