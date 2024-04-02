@@ -34,12 +34,30 @@ function changeName() {
     if (newNameInput === "") {
         alert("input a valid name");
     } else {
-        let display = confirm("Set new name to " + newNameInput.value + "?");
+        const display = confirm("Set new name to " + newNameInput.value + "?");
 
         if (display === true) {
             oldName.textContent = `${newNameInput.value}'s Calculator`;
+            console.log("user picked yes")
         }
+
+        // localStorage.setItem("name", display ? "true" : "false");
+        // console.log("name is:", display ? "on" : "off");
     }
+
+    // document.addEventListener("DOMContentLoaded", () => {
+    //    const savedName = localStorage.getItem("name");
+
+    //    if(savedName === "true") {
+    //     alert("true");
+    //     oldName.textContent = `${newNameInput.value}'s Calculator`;
+    //    } else {
+    //     oldName.textContent = `my Calculator`;
+    //    }
+    // })
+
+
+
     let CurrentFirstLetterValue = document.getElementById("CurrentFirstLetterValue");
     const newFirstLetterValue = document.getElementById("newName").value[0].toUpperCase()
     CurrentFirstLetterValue.value = `${newFirstLetterValue}C`;
